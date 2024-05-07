@@ -5,11 +5,13 @@ $args = [
     'labels' => [
         'name'          => __('Spelers', '_SBB'),
         'singular_name' => __('speler', '_SBB'),
+        'add_new_item'  => __('Voeg speler toe', '_SBB'),
+        'edit_item'     => __('Bewerk speler', '_SBB'),
+
     ],
 
-    'menu_icon'     => fontawesomeBase64('fas fa-person'),
     'menu_position' => 22,
-
+    'menu_icon'          => 'dashicons-universal-access',
     'public'      => true,
     'has_archive' => false,
     'supports'    => ['title', 'editor', 'thumbnail'],

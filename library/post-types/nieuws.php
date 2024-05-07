@@ -7,9 +7,8 @@ $args = [
         'singular_name' => __('Publicatie & blogs', '_SBB'),
     ],
 
-    'menu_icon'     => fontawesomeBase64('far fa-newspaper'),
     'menu_position' => 22,
-
+    'menu_icon'          => 'dashicons-media-document',
     'public'      => true,
     'has_archive' => false,
     'supports'    => ['title', 'editor', 'thumbnail', 'excerpt'],
@@ -25,11 +24,12 @@ $argsNews = [
     'labels' => [
         'name'          => __('Nieuws', '_SBB'),
         'singular_name' => __('Nieuws', '_SBB'),
+        'add_new_item'  => __('Nieuw nieuwsbericht', '_SBB'),
+        
     ],
 
-    'menu_icon'     => fontawesomeBase64('far fa-newspaper'),
     'menu_position' => 22,
-
+    'menu_icon'          => 'dashicons-media-document',
     'public'      => true,
     'has_archive' => false,
     'supports'    => ['title', 'editor', 'thumbnail', 'excerpt'],

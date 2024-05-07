@@ -3,8 +3,8 @@ defined('ABSPATH') || exit('Forbidden');
 
 $args = [
     'labels' => [
-        'name'          => __('Functies', '_SBB'),
-        'singular_name' => __('Functie', '_SBB'),
+        'name'          => __('Teams', '_SBB'),
+        'singular_name' => __('Team', '_SBB'),
     ],
 
     'public'       => false,
@@ -16,9 +16,11 @@ $args = [
 ];
 
 register_taxonomy(
-    'functions',
+    'teams',
     [
-        'bestuur',
+        'spelers',
+        'coaches',
+        'teams',
     ],
     $args
 );

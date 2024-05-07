@@ -5,11 +5,11 @@ $args = [
     'labels' => [
         'name'          => __('Evenementen', '_SBB'),
         'singular_name' => __('Evenement', '_SBB'),
+        'add_new_item'  => __('Voeg evenement toe', '_SBB'),
     ],
 
-    'menu_icon'     => fontawesomeBase64('far fa-calendar-star'),
     'menu_position' => 22,
-
+    'menu_icon'          => 'dashicons-tickets-alt',
     'public'      => true,
     'has_archive' => false,
     'supports'    => ['title', 'editor', 'thumbnail', 'excerpt'],

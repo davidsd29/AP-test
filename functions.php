@@ -176,3 +176,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function dc_include_theme_support_files() {
+    $library_dir = get_template_directory() . '/library/';
+
+	// Check if the directory exists
+    if ( is_dir( $library_dir ) ) {
+
+        // Get all PHP files in the directory
+        $files = glob( $library_dir . '*.php' );
+
+        // Include each file
+        foreach ( $files as $file ) {
+            if ( is_file( $file ) ) {
+                require_once $file;
+            } else {
+                // Handle error - Log or display an error message
+                error_log( "File $file does not exist or is not readable." );
+            }
+        }
+    } else {
+        // Handle error - Log or display an error message
+        error_log( "Library directory $library_dir does not exist." );
+    }
+}
+
+add_action( 'after_setup_theme', 'dc_include_theme_support_files' );
